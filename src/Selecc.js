@@ -8,14 +8,14 @@ export default function Selecc({setJugadaComputadora}){
         let numero = Math.floor(Math.random () * 3)
         //setSeleccionpc (opcion[numero]);
         setJugadaComputadora (opcion[numero]);
-        console.log (opcion[numero]);
+        console.log ("jugada pc " + opcion[numero]);
         //document.getElementById("eleccionDePc").innerHTML = "PC eligió: " + seleccionpc;
 
-    }
+   }
    
     return (
         <>
-            <button onClick={() => seletionpc()}>Jugar</button>
+            <button onClick={() => seletionpc()}>jugada Computadora</button>
             {/* <p id="eleccionDePc"> La PC eligio: {seleccionpc} </p> */}
         </>
     )

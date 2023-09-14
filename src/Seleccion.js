@@ -6,12 +6,16 @@ import React from 'react';
 
 export default function Seleccion({setJugadaUsuario}){
     //const [seleccionUsuario, setUserseleccion] = useState ('');
+    //const opcion = ["piedra" , "papel" , "tijera"];
     function select (option){
         //let jugadaUsuario = option;
         //setUserseleccion (option);
         //console.log (jugadaUsuario);
         console.log (option);
         setJugadaUsuario (option);
+        //let numero = Math.floor(Math.random () * 3)
+        // setJugadaComputadora (opcion[numero]);
+        // console.log ("jugada pc " + opcion[numero]);
         //option= (seleccionUsuario);
        // document.getElementById("eleccionDelUsuario").innerHTML = "Jugador eligió: " + seleccionUsuario;
     }
