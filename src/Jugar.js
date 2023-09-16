@@ -13,30 +13,37 @@ function Jugar ({jugadaUsuario,habilitarSeleccion,setHabilitacionSeleccion}){
     const opcion = ["piedra" , "papel" , "tijera"];
     
     function determinarGanador (){
-    if ( (jugadaComputadora === "piedra" && jugadaUsuario === "tijera")||
-    (jugadaComputadora === "papel" && jugadaUsuario==="piedra")||
-    (jugadaComputadora === "tijera" && jugadaUsuario === "papel")){
+    if (jugadaUsuario !==''){
+        if ( (jugadaComputadora === "piedra" && jugadaUsuario === "tijera")||
+            (jugadaComputadora === "papel" && jugadaUsuario==="piedra")||
+            (jugadaComputadora === "tijera" && jugadaUsuario === "papel")){
         //console.log("Gana PC");
-        puntosComputadora=(puntosComputadora+1);
+                puntosComputadora=(puntosComputadora+1);
         //puntosComputadora +=1;
         //console.log("puntos PC: "+ puntosComputadora);
-        setResultado ("Gana PC");
+                setResultado ("Gana PC");
         //setResultado("Gana PC")
-    }
-    else if ( (jugadaComputadora === "tijera" && jugadaUsuario === "piedra")||
-    (jugadaComputadora === "piedra" && jugadaUsuario==="papel")||
-    (jugadaComputadora === "papel" && jugadaUsuario === "tijera")){
+        }
+        else if ( (jugadaComputadora === "tijera" && jugadaUsuario === "piedra")||
+        (jugadaComputadora === "piedra" && jugadaUsuario==="papel")||
+        (jugadaComputadora === "papel" && jugadaUsuario === "tijera")){
       //console.log ("Gana Jugador");
-      puntosJugador=(puntosJugador+1) ;
+            puntosJugador=(puntosJugador+1) ;
       //puntosJugador +=1;
       //console.log("Puntos Jugador: "+puntosJugador)
-      setResultado ("Gana Jugador")
+            setResultado ("Gana Jugador")
     }
-    else if (jugadaComputadora===jugadaUsuario){
+        else if (jugadaComputadora===jugadaUsuario){
       //console.log("Empate")
-      setResultado ("Empate");
-  }
-  setIntentos (intentos+1);
+            setResultado ("Empate");
+        } 
+        setIntentos (intentos+1);
+    }    
+    else {
+        alert ("Debe ingresar su jugada")
+    }
+  
+  
   //console.log("intentos"+ intentos)
 }
     function enClick(){
