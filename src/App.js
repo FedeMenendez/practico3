@@ -5,23 +5,24 @@ import Nombre from './Nombre.js';
 import './App.css';
 import Jugar from "./Jugar";
 import Seleccion from './Seleccion.js';
-import Selecc from './Selecc.js';
+//import Selecc from './Selecc.js';
 
 
 function App() {
   //const [nombre,setNombre]=useState ('');
   const [jugadaUsuario,setJugadaUsuario]= useState ('');
-  const [jugadaComputadora,setJugadaComputadora]=useState ('');
-  let habilitar = true;
+  const [habilitarSeleccion,setHabilitacionSeleccion]=useState (true);
+  //const [habilitarNombre,setHabilitarNombre] = useState ('false');
+  //let habilitarSeleccion=true;
   return (
     <div className="App">
-      <Nombre/>
-      <Seleccion setJugadaUsuario={setJugadaUsuario} />
-      <p>La jugada del usuario es: {jugadaUsuario}</p>
-      <Selecc setJugadaComputadora={setJugadaComputadora}/>
-       <p>La jugada de la computadora es: {jugadaComputadora}</p> 
+      <Nombre setHabilitacionSeleccion={setHabilitacionSeleccion}/>
+      <Seleccion setJugadaUsuario={setJugadaUsuario} habilitarSeleccion={habilitarSeleccion}/>
+           
+      {/* <Selecc setJugadaComputadora={setJugadaComputadora}/> */}
+       {/* <p>La jugada de la computadora es: {jugadaComputadora}</p>  */}
        
-       <Jugar jugadaComputadora={jugadaComputadora} jugadaUsuario={jugadaUsuario} habilitar={habilitar}/>
+       <Jugar jugadaUsuario={jugadaUsuario} habilitarSeleccion={habilitarSeleccion} setHabilitacionSeleccion={setHabilitacionSeleccion}/>
        
     </div>
   );

@@ -1,25 +1,35 @@
 import { useState } from "react";
 
-const Nombre =()=>{
+export default function Nombre ({setHabilitacionSeleccion}){
     const [username, setusername] = useState ('');
     const [deshabilitar, setDeshabilitar]=useState ('');
-    const handleClick = e => {
+    
+    function handleClick (e){
         //let nombreJugador = document.getElementById ("nombre").value;
         //document.getElementById("mensaje").innerHTML = "Hola " + username + " elige!!! ";
         setusername(e.target.value);
-        console.log (username)
+        //console.log (username)
+        
       };
-    const enClick = e=> {
-        setDeshabilitar (true);
+    function enClick () {
+        if(username!==""){
+            setDeshabilitar (true);
+            setHabilitacionSeleccion(false);
+        }
+        else{
+            alert ("Por favor ingrese su nombre");
+        }
+    
     }
     return(
-        <>
+        <> 
             <h1>Bienvenido a piedra, papel, tijera</h1>
-            <label>Ingrese su nombre: </label>
+            <div className="presentacion">  
+            <h2>Ingrese su nombre: </h2>
             <input type='text' id="nombre" placeholder='Nombre Jugador' value={username} onChange={handleClick} disabled= {deshabilitar}></input>
-            <button onClick={enClick} disabled= {deshabilitar}>Ingreso Nombre</button>
-            <p id="mensaje">Hola! {username} elige:</p>
-        </>
+            <button id="ingresoNombre" onClick={enClick} disabled= {deshabilitar}>Ingreso Nombre</button>
+            <h3 id="mensaje">Hola! {username} elige:</h3>
+        </div></>
     )
 }
-export default Nombre; 
+//export default function Nombre (setHabilitacionSeleccion) ; 

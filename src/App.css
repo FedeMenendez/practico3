@@ -1,38 +1,83 @@
 .App {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  background-color: gainsboro;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#btn{
+  padding: 15px;
+  display:flexbox;
+  background-color: white;
+  border-radius: 60%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#btn:focus{
+  background-color: brown;
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#btn:hover{
+  transform: scale(110%);
+}
+.presentacion{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: baseline;
+  column-gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+img{
+  max-width: 50%;
+  max-height:50%;
+  position: static;
+  border-radius: 5%;
+}
+.resultados1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 180px;
+  row-gap: 30px;
+  height: 80px;
+}
+.resultados2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 180px;
+  row-gap: 20px;
 }
 
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+#jugar{
+  width: 200px;
+  height: 50px;
+  font-size: x-large;
+  font-family:Arial, Helvetica, sans-serif;
+  font: bold;
+  background-color: seagreen;
+}
+
+#reset{
+  width: 200px;
+  height: 50px;
+  font-size: x-large;
+  font-family:Arial, Helvetica, sans-serif;
+  font: bold;
+  background-color: rgb(244, 168, 167);
+}
+#ingresoNombre{
+  width: 200px;
+  height: 40px;
+  font-size: x-large;
+  font-family:Arial, Helvetica, sans-serif;
+  font: bold;
+  background-color: rgb(139, 139, 230);
+}
+
+#nombre{
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+}
